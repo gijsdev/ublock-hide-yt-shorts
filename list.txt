@@ -1,0 +1,23 @@
+! Version: 1.0.0
+! Title: Hide YouTube Shorts
+! Last modified: 2022-10-29 17:32
+! Expires: 2 weeks (update frequency)
+! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
+
+! Hide all videos containing the phrase "#shorts"
+youtube.com##yyd-grid-video-renderer:has(#video-title:has-text(#shorts))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Shorts))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#short))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
+
+! Hide all videos with the shorts indicator on the thumbnail
+youtube.com##ytd-grid-video-renderer.ytd-grid-renderer.style-scope:has([overlay-style="SHORTS"])
+
+! Hide shorts button in sidebar
+youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
+
+! Hide shorts section on homepage
+youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
+
+! Hide shorts tab on channel pages
+youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
