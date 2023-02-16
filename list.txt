@@ -7,7 +7,7 @@
 ! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
 
 ! Hide all videos containing the phrase "#shorts"
-youtube.com##yyd-grid-video-renderer:has(#video-title:has-text(#shorts))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#shorts))
 youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Shorts))
 youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#short))
 youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
