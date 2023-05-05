@@ -46,5 +46,8 @@ m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 ! Hide all videos with the shorts indicator on the thumbnail
 m.youtube.com##ytm-item-section-renderer:has([data-style="SHORTS"])
 
+! Hide shorts section on homepage
+m.youtube.com##ytm-rich-section-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts))
+
 ! Hide shorts tab on channel pages
 m.youtube.com##ytm-single-column-browse-results-renderer>.scbrr-tabs>.scbrr-tab:has-text(Shorts)
