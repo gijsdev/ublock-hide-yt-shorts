@@ -17,6 +17,7 @@ youtube.com##ytd-grid-video-renderer.ytd-grid-renderer.style-scope:has([overlay-
 
 ! Hide shorts button in sidebar
 youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
+youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
 
 ! Hide shorts section on homepage
 youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
