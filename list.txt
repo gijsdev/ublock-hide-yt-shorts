@@ -21,6 +21,7 @@ youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
 
 ! Hide shorts section on homepage
 youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
+youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(Shorts))
 
 ! Hide shorts tab on channel pages
 youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
