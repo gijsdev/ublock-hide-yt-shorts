@@ -13,7 +13,8 @@ youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#short))
 youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
 
 ! Hide all videos with the shorts indicator on the thumbnail
-youtube.com##ytd-grid-video-renderer.ytd-grid-renderer.style-scope:has([overlay-style="SHORTS"])
+youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
 
 ! Hide shorts button in sidebar
 youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
