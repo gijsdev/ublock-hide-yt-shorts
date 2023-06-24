@@ -1,7 +1,7 @@
 ! Title: Hide YouTube Shorts
 ! Description: Hide all traces of YouTube shorts videos on YouTube
-! Version: 1.4.0
-! Last modified: 2023-06-06 20:43
+! Version: 1.4.1
+! Last modified: 2023-06-25 00:23
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
 ! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
@@ -48,11 +48,11 @@ m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#Short))
 m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 
 ! Hide all videos with the shorts indicator on the thumbnail
-m.youtube.com##ytm-item-section-renderer:has([data-style="SHORTS"])
+m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
 
-! Hide shorts section on homepage
-m.youtube.com##ytm-rich-section-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts))
-m.youtube.com##ytm-item-section-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts))
+! Hide shorts sections
+m.youtube.com##ytm-rich-section-renderer:has(ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts)))
+m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-text(Shorts))
 
 ! Hide shorts tab on channel pages
-m.youtube.com##ytm-single-column-browse-results-renderer>.scbrr-tabs>.scbrr-tab:has-text(Shorts)
+m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
