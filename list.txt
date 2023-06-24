@@ -16,7 +16,7 @@ youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
 youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
 youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])
 youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
-youtube.com##ytd-item-section-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-item-section-renderer.ytd-section-list-renderer:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
 
 ! Hide shorts button in sidebar
 youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
