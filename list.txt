@@ -54,4 +54,4 @@ m.youtube.com##ytm-rich-section-renderer:has(ytm-reel-shelf-renderer:has(.reel-s
 m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-text(Shorts))
 
 ! Hide shorts tab on channel pages
-m.youtube.com##ytm-single-column-browse-results-renderer>.scbrr-tabs>.scbrr-tab:has-text(Shorts)
+m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
