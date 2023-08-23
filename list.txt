@@ -29,6 +29,9 @@ youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(Short
 ! Hide shorts tab on channel pages
 youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
 
+! Remove empty spaces in grid
+youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
+
 
 !!! MOBILE !!!
 
