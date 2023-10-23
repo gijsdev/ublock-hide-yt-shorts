@@ -19,16 +19,16 @@ youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
 youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="subscriptions"]:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
 
 ! Hide shorts button in sidebar
-youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
-youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
+youtube.com##ytd-guide-entry-renderer:has-text(/^Shorts$/)
+youtube.com##ytd-mini-guide-entry-renderer:has-text(/^Shorts$/)
 
 ! Hide shorts section on homepage
-youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
-youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(Shorts))
+youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(/^Shorts$/))
+youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/^Shorts$/))
 
 ! Hide shorts tab on channel pages
 ! Old style
-youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
+youtube.com##tp-yt-paper-tab:has-text(/^Shorts$/)
 ! New style (2023-10)
 youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 
@@ -57,8 +57,8 @@ m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
 
 ! Hide shorts sections
-m.youtube.com##ytm-rich-section-renderer:has(ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts)))
-m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-text(Shorts))
+m.youtube.com##ytm-rich-section-renderer:has(ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper:has-text(/^Shorts$/)))
+m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-text(/^Shorts$/))
 
 ! Hide shorts tab on channel pages
-m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
+m.youtube.com##.single-column-browse-results-tabs>a:has-text(/^Shorts$/)
