@@ -33,7 +33,7 @@ youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
 youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 
 ! Hide shorts in video descriptions
-youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer.style-scope:has-text("Shorts remixing this video")
+youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text("Shorts remixing this video")
 
 ! Remove empty spaces in grid
 youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
