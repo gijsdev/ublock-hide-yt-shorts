@@ -1,7 +1,7 @@
 ! Title: Hide YouTube Shorts
 ! Description: Hide all traces of YouTube shorts videos on YouTube
 ! Version: 1.8.0
-! Last modified: 2023-01-08 20:02
+! Last modified: 2024-01-08 20:02
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
 ! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
