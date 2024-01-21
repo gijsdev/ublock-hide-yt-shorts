@@ -38,6 +38,8 @@ youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer
 ! Remove empty spaces in grid
 youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
 
+! Hide shorts category on search pages
+youtube.com##yt-chip-cloud-chip-renderer.yt-chip-cloud-renderer.style-scope:has-text(Shorts)
 
 !!! MOBILE !!!
 
