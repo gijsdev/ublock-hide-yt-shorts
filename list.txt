@@ -39,7 +39,7 @@ youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer
 youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
 
 ! Hide shorts category on search pages
-youtube.com##yt-chip-cloud-chip-renderer.yt-chip-cloud-renderer.style-scope:has-text(Shorts)
+youtube.com##yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
 !!! MOBILE !!!
 
@@ -67,3 +67,6 @@ m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-te
 
 ! Hide shorts tab on channel pages
 m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
+
+! Hide shorts category on search pages
+m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
