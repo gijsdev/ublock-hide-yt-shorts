@@ -38,8 +38,8 @@ www.youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-rend
 ! Remove empty spaces in grid
 www.youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
 
-! Hide shorts category on search pages
-www.youtube.com##yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
+! Hide shorts category on homepage and search pages
+www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
 !!! MOBILE !!!
 
@@ -71,5 +71,5 @@ m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
 ! New style (2023-10)
 m.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 
-! Hide shorts category on search pages
+! Hide shorts category on homepage
 m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
