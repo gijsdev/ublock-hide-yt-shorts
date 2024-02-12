@@ -32,7 +32,7 @@ www.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
 ! New style (2023-10)
 www.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 
-! Hide shorts in video descriptions
+! Hide short remixes in video descriptions
 www.youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text("Shorts remixing this video")
 
 ! Remove empty spaces in grid
@@ -70,6 +70,9 @@ m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-te
 m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
 ! New style (2023-10)
 m.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
+
+! Hide short remixes in video descriptions
+m.youtube.com##ytm-reel-shelf-renderer:has-text("Shorts remixing this video")
 
 ! Hide shorts category on homepage
 m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
