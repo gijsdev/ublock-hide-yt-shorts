@@ -34,8 +34,8 @@ www.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
 ! New style (2023-10)
 www.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 
-! Hide short remixes in video descriptions
-www.youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text(/^Shorts remixing this video$/i)
+! Hide short remixes in video descriptions and in suggestions beside the comments
+www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix.*$/i))
 
 ! Hide shorts category on homepage and search pages
 www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
@@ -64,8 +64,8 @@ m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
 ! New style (2023-10)
 m.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 
-! Hide short remixes in video descriptions
-m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/^Shorts remixing this video$/i))
+! Hide short remixes in video descriptions and in suggestions below the player
+m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts.?Remix.*$/i))
 
 ! Hide shorts category on homepage
 m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
