@@ -28,6 +28,9 @@ www.youtube.com##ytd-mini-guide-entry-renderer:has(.title:has-text(/^Shorts$/i))
 www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-rich-section-renderer:has(#title:has-text(/(^| )Shorts( |$)/i))
 www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))
 
+! Hide Playables section
+www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-rich-shelf-renderer:has(#title:has-text(/(^| )Playables( |$)/i))
+
 ! Hide shorts tab on channel pages`
 ! Old style
 www.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
