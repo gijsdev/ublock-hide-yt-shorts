@@ -1,72 +1,60 @@
-! Title: Hide YouTube Shorts
-! Description: Hide all traces of YouTube shorts videos on YouTube
-! Version: 1.10.0
-! Last modified: 2024-08-31 19:24
-! Expires: 2 weeks (update frequency)
-! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
-! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
+!!! Desktop !!!
 
-! Remove empty spaces in grid
-www.youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
-
-! Hide all videos containing the phrase "#shorts"
-www.youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-www.youtube.com##ytd-rich-item-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-
-! Hide all videos with the shorts indicator on the thumbnail
-www.youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
-www.youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])
-www.youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
-www.youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="subscriptions"]:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
-
-! Hide shorts button in sidebar
-www.youtube.com##ytd-guide-entry-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
-! Tablet resolution
-www.youtube.com##ytd-mini-guide-entry-renderer:has(.title:has-text(/^Shorts$/i))
-
-! Hide shorts sections except on history page
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-rich-section-renderer:has(#title:has-text(/(^| )Shorts( |$)/i))
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))
-
-! Hide shorts tab on channel pages`
-! Old style
-www.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
-! New style (2023-10)
-www.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
-
-! Hide short remixes in video descriptions and in suggestions beside the comments
-www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix.*$/i))
-
-! Hide shorts category on homepage and search pages
-www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
-
-!!! MOBILE !!!
-
-! Hide all videos in home feed containing the phrase "#shorts"
-www.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-
-! Hide all videos in subscription feed containing the phrase "#shorts"
-m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-
-! Hide shorts button in the bottom navigation bar
-m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
-
-! Hide all videos with the shorts indicator on the thumbnail
-m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
-
-! Hide shorts sections except on history page
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-rich-section-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
-
+! https://github.com/gijsdev/ublock-hide-yt-shorts
 ! Hide shorts tab on channel pages
 ! Old style
-m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
+m.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
 ! New style (2023-10)
 m.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 
-! Hide short remixes in video descriptions and in suggestions below the player
-m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts.?Remix.*$/i))
+! https://github.com/gijsdev/ublock-hide-yt-shorts
+! Remove empty spaces in grid
+youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
 
-! Hide shorts category on homepage
-m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
-m.youtube.com##ytm-rich-section-renderer:has(.rich-section-content)
+
+!!! MOBILE !!!
+
+! https://github.com/gijsdev/ublock-hide-yt-shorts
+! Hide all videos in home feed containing the phrase "#shorts"
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#shorts))
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#Shorts))
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#short))
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#Short))
+
+! https://github.com/gijsdev/ublock-hide-yt-shorts
+! Hide all videos in subscription feed containing the phrase "#shorts"
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#shorts))
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#Shorts))
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#short))
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#Short))
+
+! https://github.com/gijsdev/ublock-hide-yt-shorts
+! Hide shorts button in the bottom navigation bar
+m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
+
+! https://github.com/gijsdev/ublock-hide-yt-shorts
+! Hide all videos with the shorts indicator on the thumbnail
+m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
+
+! https://github.com/gijsdev/ublock-hide-yt-shorts
+! Hide shorts sections
+m.youtube.com##ytm-rich-section-renderer:has(ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts)))
+m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-text(Shorts))
+
+! https://github.com/gijsdev/ublock-hide-yt-shorts
+! Hide shorts tab on channel pages
+m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
+
+! @logdumpster 
+! Hide home tab
+! 2024-01-06 https://m.youtube.com
+m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(1)
+
+! @logdumpster
+! Hide recommended videos
+m.youtube.com##.fresh-feeds-dismissals.full-bleed-wn-thumbs.watch-content > ytm-item-section-renderer.single-column-watch-next-modern-panels.scwnr-content > lazy-list
+
+! Dec 20, 2024 https://m.youtube.com
+m.youtube.com##.ytGridShelfViewModelHost
+m.youtube.com##.rich-section-content
+
