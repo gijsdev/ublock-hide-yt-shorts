@@ -28,6 +28,10 @@ www.youtube.com##ytd-mini-guide-entry-renderer:has(.title:has-text(/^Shorts$/i))
 www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-rich-section-renderer:has(#title:has-text(/(^| )Shorts( |$)/i))
 www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))
 
+! Hide shorts in 'special containers' on the home page
+www.youtube.com##.ytdRichGridGroupContents
+www.youtube.com##ytd-rich-grid-group.ytdRichGridGroupHost
+
 ! Hide shorts tab on channel pages`
 ! Old style
 www.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
