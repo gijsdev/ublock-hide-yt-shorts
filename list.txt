@@ -1,72 +1,27 @@
 ! Title: Hide YouTube Shorts
 ! Description: Hide all traces of YouTube shorts videos on YouTube
 ! Version: 1.10.0
-! Last modified: 2024-08-31 19:24
+! Last modified: 2025-04-2 18:47 UTC
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
 ! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
 
-! Remove empty spaces in grid
-www.youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
+! Shorts on search list(keeps shorts in history)
+www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer
+www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-video-renderer:has([aria-label="Shorts"])
+!Shorts search button
+www.youtube.com##yt-chip-cloud-chip-renderer:has([title="Shorts"])
 
-! Hide all videos containing the phrase "#shorts"
-www.youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-www.youtube.com##ytd-rich-item-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-
-! Hide all videos with the shorts indicator on the thumbnail
-www.youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
-www.youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])
-www.youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
-www.youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="subscriptions"]:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
-
-! Hide shorts button in sidebar
-www.youtube.com##ytd-guide-entry-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
-! Tablet resolution
-www.youtube.com##ytd-mini-guide-entry-renderer:has(.title:has-text(/^Shorts$/i))
-
-! Hide shorts sections except on history page
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-rich-section-renderer:has(#title:has-text(/(^| )Shorts( |$)/i))
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))
-
-! Hide shorts tab on channel pages`
-! Old style
-www.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
-! New style (2023-10)
-www.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
-
-! Hide short remixes in video descriptions and in suggestions beside the comments
-www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix.*$/i))
-
-! Hide shorts category on homepage and search pages
-www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
-
-!!! MOBILE !!!
-
-! Hide all videos in home feed containing the phrase "#shorts"
-www.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-
-! Hide all videos in subscription feed containing the phrase "#shorts"
-m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
-
-! Hide shorts button in the bottom navigation bar
-m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
-
-! Hide all videos with the shorts indicator on the thumbnail
-m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
-
-! Hide shorts sections except on history page
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-rich-section-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
-
-! Hide shorts tab on channel pages
-! Old style
-m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
-! New style (2023-10)
-m.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
-
-! Hide short remixes in video descriptions and in suggestions below the player
-m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts.?Remix.*$/i))
-
-! Hide shorts category on homepage
-m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
-
+! Home page
+! Shorts
+www.youtube.com##ytd-rich-shelf-renderer:matches-attr(is-shorts)
+! Shorts sidebar button
+www.youtube.com##ytd-guide-entry-renderer:has([title="Shorts"])
+! Playables
+www.youtube.com##ytd-rich-shelf-renderer:has([title="YouTube Playables"])
+! Playables sidebar button
+www.youtube.com##ytd-guide-entry-renderer:has([title="Playables"])
+! News
+!www.youtube.com##ytd-rich-shelf-renderer:has(.bar)
+! News sidebar button
+!www.youtube.com##ytd-guide-entry-renderer:has([title="News"])
