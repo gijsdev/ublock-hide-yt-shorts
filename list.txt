@@ -17,11 +17,21 @@ www.youtube.com##yt-chip-cloud-chip-renderer:has([title="Shorts"])
 www.youtube.com##ytd-rich-shelf-renderer:matches-attr(is-shorts)
 ! Shorts sidebar button
 www.youtube.com##ytd-guide-entry-renderer:has([title="Shorts"])
+! Mini sidebar Shorts button
+www.youtube.com##ytd-mini-guide-entry-renderer:has([title="Shorts"])
 ! Playables
 www.youtube.com##ytd-rich-shelf-renderer:has([title="YouTube Playables"])
 ! Playables sidebar button
 www.youtube.com##ytd-guide-entry-renderer:has([title="Playables"])
+! Movies
+www.youtube.com##ytd-rich-section-renderer:has([aria-label="Explore more movies"])
+www.youtube.com##ytd-rich-section-renderer:has([aria-label="FREE"])
+! Movies sidebar button
+www.youtube.com##ytd-guide-entry-renderer:has([title="Movies & TV"])
 ! News
 !www.youtube.com##ytd-rich-shelf-renderer:has(.bar)
 ! News sidebar button
 !www.youtube.com##ytd-guide-entry-renderer:has([title="News"])
+
+! Profile shorts tab
+!##yt-tab-shape:matches-attr(tab-title="Shorts")
