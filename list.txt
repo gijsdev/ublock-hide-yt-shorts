@@ -70,3 +70,8 @@ m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-at
 ! Hide shorts category on homepage
 m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
 
+! Hide shorts grid shelf sections (new layout)
+www.youtube.com##grid-shelf-view-model:has(h2:has-text(/^Shorts$/i))
+www.youtube.com##ytd-item-section-renderer:has(grid-shelf-view-model:has(h2:has-text(/^Shorts$/i)))
+! Hide shorts grid shelf by class (when it has Shorts title)
+www.youtube.com##.ytGridShelfViewModelHost:has(h2:has-text(/^Shorts$/i))
