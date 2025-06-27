@@ -1,7 +1,7 @@
 ! Title: Hide YouTube Shorts
 ! Description: Hide all traces of YouTube shorts videos on YouTube
-! Version: 1.10.0
-! Last modified: 2024-08-31 19:24
+! Version: 1.20.0
+! Last modified: 2025-06-27 12:24
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
 ! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
@@ -40,6 +40,15 @@ www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix
 ! Hide shorts category on homepage and search pages
 www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
+! Hide shorts grid on search results
+www.youtube.com##grid-shelf-view-model:has(h2:has-text(/^Shorts$/i))
+www.youtube.com##ytd-item-section-renderer:has(grid-shelf-view-model:has(h2:has-text(/^Shorts$/i)))
+www.youtube.com##.ytGridShelfViewModelHost:has(h2:has-text(/^Shorts$/i))
+
+! Hide shorts in 'special containers' on the home page
+www.youtube.com##.ytdRichGridGroupContents
+www.youtube.com##ytd-rich-grid-group.ytdRichGridGroupHost
+
 !!! MOBILE !!!
 
 ! Hide all videos in home feed containing the phrase "#shorts"
@@ -56,6 +65,7 @@ m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
 
 ! Hide shorts sections except on history page
 m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-rich-section-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
+m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-rich-section-renderer:has(.yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
 m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
 
 ! Hide shorts tab on channel pages
@@ -69,9 +79,3 @@ m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-at
 
 ! Hide shorts category on homepage
 m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
-
-! Hide shorts grid shelf sections (new layout)
-www.youtube.com##grid-shelf-view-model:has(h2:has-text(/^Shorts$/i))
-www.youtube.com##ytd-item-section-renderer:has(grid-shelf-view-model:has(h2:has-text(/^Shorts$/i)))
-! Hide shorts grid shelf by class (when it has Shorts title)
-www.youtube.com##.ytGridShelfViewModelHost:has(h2:has-text(/^Shorts$/i))
