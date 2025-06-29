@@ -6,11 +6,11 @@
 ! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
 ! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
 
-! Shorts on search list(keeps shorts in history)
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer
+! Shorts in search results(keeps shorts in history)
+www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)grid-shelf-view-model
 www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-video-renderer:has([aria-label="Shorts"])
 !Shorts search button
-www.youtube.com##yt-chip-cloud-chip-renderer:has([title="Shorts"])
+www.youtube.com##yt-chip-cloud-chip-renderer:nth-of-type(2):has-text(Shorts)
 
 ! Home page
 ! Shorts
@@ -29,9 +29,9 @@ www.youtube.com##ytd-rich-section-renderer:has([aria-label="FREE"])
 ! Movies sidebar button
 www.youtube.com##ytd-guide-entry-renderer:has([title="Movies & TV"])
 ! News
-!www.youtube.com##ytd-rich-shelf-renderer:has(.bar)
+www.youtube.com##ytd-rich-shelf-renderer:has(.bar)
 ! News sidebar button
-!www.youtube.com##ytd-guide-entry-renderer:has([title="News"])
+www.youtube.com##ytd-guide-entry-renderer:has([title="News"])
 
 ! Profile shorts tab
-!##yt-tab-shape:matches-attr(tab-title="Shorts")
+!www.youtube.com##yt-tab-shape:matches-attr(tab-title="Shorts")
