@@ -85,3 +85,20 @@ m.youtube.com##ytm-reel-shelf-renderer
 m.youtube.com##ytm-video-with-context-renderer:has(a[href^="/shorts/"])
 
 ! Finished with YT-Shorts
+
+!!! Instagram !!!
+
+! Hide the Reels icon from the sidebar and leftover space/container after Reels icon is removed
+www.instagram.com##span:has(a[href="/reels/"])
+www.instagram.com##a[href="/reels/"]:upward(span):upward(div)
+
+! The following rule hides the Explore icon, but it's commented out
+! because Instagram combines Explore and Search functionality.
+! Uncomment if you are using it on desktop, where Explore is separate.
+!www.instagram.com##span:has(a[href="/explore/"])
+
+! Note : Comment explore since it removes find/search icon since explore and search integrated together
+
+! Finished with Instagram-Reels
+
+
