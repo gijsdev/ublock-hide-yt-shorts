@@ -40,6 +40,9 @@ www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix
 ! Hide shorts category on homepage and search pages
 www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
+! Hide slider under the categories inside channels.
+www.youtube.com##div.yt-tab-group-shape-wiz__slider
+
 !!! MOBILE !!!
 
 ! Hide all videos in home feed containing the phrase "#shorts"
