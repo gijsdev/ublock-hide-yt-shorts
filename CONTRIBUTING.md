@@ -18,7 +18,7 @@ This is to prevent hiding elements on other subdomains like `studio.youtube.com`
 Don't keep unnecessary `.style-scope` classes in your filter, for example.
 
 ## Always try to include "Shorts" in your filter
-Always try to select an element which has the name or text "Shorts" in it. I might add Reels to the list but I'm cautious to not interfere with other elements on the page.
+Always try to select an element which has the name or text "Shorts" in it. I might add Reels to the list, but I'm cautious to not interfere with other elements on the page.
 
 ## Point to the specific elements
-It's not always clear what elements you're talking about. Try to include a screenshot of the elements or a link to a specific page where you will always find the elements.
+It's not always immediately clear what elements you're talking about. Try to include a screenshot of the elements or a link to a specific page where you will find the elements.
