@@ -55,7 +55,7 @@ m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
 
 ! Hide shorts sections except on history page
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-rich-section-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
+m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-rich-section-renderer:has(.yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
 m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
 
 ! Hide shorts tab on channel pages
