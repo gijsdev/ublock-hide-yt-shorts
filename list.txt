@@ -41,7 +41,7 @@ www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix
 www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
 ! Hide shorts sections on search page
-www.youtube.com##.shelf-header-layout-wiz__title:has-text(/^Shorts$/):upward(grid-shelf-view-model)
+www.youtube.com##.shelf-header-layout-wiz__title:has-text(/(^| )Shorts( |$)/i):upward(grid-shelf-view-model)
 
 
 !!! MOBILE !!!
