@@ -37,6 +37,9 @@ www.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 ! Hide short remixes in video descriptions and in suggestions beside the comments
 www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix.*$/i))
 
+! Hide shorts in video tablist
+www.youtube.com##ytd-reel-shelf-renderer.ytd-item-section-renderer.style-scope
+
 ! Hide shorts category on homepage and search pages
 www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
