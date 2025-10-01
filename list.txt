@@ -9,6 +9,9 @@
 ! Remove empty spaces in grid
 www.youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
 
+! Remove rich shelf shorts section
+www.youtube.com##ytd-rich-shelf-renderer[is-shorts]
+
 ! Hide all videos containing the phrase "#shorts"
 www.youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
 www.youtube.com##ytd-rich-item-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))
