@@ -17,8 +17,11 @@ This is to prevent hiding elements on other subdomains like `studio.youtube.com`
 ## Don't make your selector more complicated than it needs to be
 Don't keep unnecessary `.style-scope` classes in your filter, for example.
 
-## Always try to include "Shorts" in your filter
-Always try to select an element which has the name or text "Shorts" in it. I might add Reels to the list, but I'm cautious to not interfere with other elements on the page.
+## Always try to include "Short(s)" or "Reel(s)" in your filter
+Always try to select an element which has the name or text "Short(s)" or "Reel(s)" in it.
 
-## Point to the specific elements
+## Try to avoid :has-text() selectors
+It's more performant to use element selectors instead of :has-text() selectors. If there really is not other way to identify the element, then you can use :has-text().
+
+## Point to the specific elements with a screenshot or description
 It's not always immediately clear what elements you're talking about. Try to include a screenshot of the elements or a link to a specific page where you will find the elements.
