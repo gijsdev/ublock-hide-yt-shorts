@@ -61,7 +61,7 @@ m.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
 m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts.?Remix.*$/i))
 
 ! Hide shorts category on homepage
-m.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
+m.youtube.com##ytm-rich-section-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
 
 ! Hide shorts sections on search page
 m.youtube.com##ytm-reel-shelf-renderer:has(ytm-shorts-lockup-view-model)
