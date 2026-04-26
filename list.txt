@@ -6,49 +6,49 @@
 ! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
 ! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
 
+! Hide all videos with the shorts indicator
+www.youtube.com##ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]:upward(ytd-video-renderer)
+
+! Remove generic shorts shelf except on history page
+www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer
+
 ! Remove rich shelf shorts section
-www.youtube.com##ytd-rich-shelf-renderer[is-shorts]
+www.youtube.com##ytd-rich-shelf-renderer[is-shorts],ytd-rich-shelf-renderer[is-shorts]:upward(ytd-rich-section-renderer)
 www.youtube.com##ytd-rich-item-renderer[rendered-from-rich-grid] ytm-shorts-lockup-view-model:upward(ytd-rich-item-renderer[rendered-from-rich-grid])
 
 ! Hide shorts button in sidebar
-www.youtube.com##ytd-guide-entry-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
+www.youtube.com##ytd-guide-entry-renderer:has(.ytd-guide-entry-renderer[title="Shorts"])
 ! Tablet resolution
-www.youtube.com##ytd-mini-guide-entry-renderer:has(.title:has-text(/^Shorts$/i))
-
-! Hide shorts sections except on history page
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-rich-section-renderer:has(#title:has-text(/(^| )Shorts( |$)/i))
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))
+www.youtube.com##ytd-mini-guide-entry-renderer:has(.ytd-mini-guide-entry-renderer[title="Shorts"])
 
 ! Hide shorts tab on channel pages
-www.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
+www.youtube.com##yt-tab-shape[tab-title="Shorts"]
 
-! Hide short remixes in video descriptions and in suggestions beside the comments
-www.youtube.com##ytd-reel-shelf-renderer:has(#title:has-text(/(^| )Shorts.?Remix.*$/i))
-
-! Hide shorts category on homepage and search pages
-www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
+! Hide shorts filter/category on top of homepage and search pages
+www.youtube.com##yt-chip-cloud-chip-renderer:has(.ytChipShapeInactive:has-text(/^Shorts$/i))
 
 ! Hide shorts sections on search page
-www.youtube.com##.shelf-header-layout-wiz__title:has-text(/(^| )Shorts( |$)/i):upward(grid-shelf-view-model)
-www.youtube.com##.yt-shelf-header-layout__title:has-text(/(^| )Shorts( |$)/i):upward(grid-shelf-view-model)
+www.youtube.com##ytm-shorts-lockup-view-model-v2:upward(grid-shelf-view-model)
 
 !!! MOBILE !!!
+
+! Hide all videos with the shorts indicator
+m.youtube.com##ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-video-with-context-renderer)
+
+! Remove generic shorts shelf except on history page
+m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-reel-shelf-renderer
 
 ! Hide shorts button in the bottom navigation bar
 m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 
 ! Hide shorts sections except on history page
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-rich-section-renderer:has(.yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))
+m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-shorts-lockup-view-model:upward(ytm-rich-section-renderer)
 
 ! Hide shorts tab on channel pages
-m.youtube.com##yt-tab-shape:has-text(/^Shorts$/)
+m.youtube.com##yt-tab-shape[tab-title="Shorts"]
 
-! Hide short remixes in video descriptions and in suggestions below the player
-m.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts.?Remix.*$/i))
-
-! Hide shorts category on homepage
-m.youtube.com##ytm-rich-section-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))
+! Hide shorts filter/category on top of homepage and search pages
+www.youtube.com##ytm-chip-cloud-chip-renderer:has([aria-label="Shorts"])
 
 ! Hide shorts sections on search page
-m.youtube.com##ytm-reel-shelf-renderer:has(ytm-shorts-lockup-view-model)
+m.youtube.com##ytm-shorts-lockup-view-model:upward(grid-shelf-view-model)
