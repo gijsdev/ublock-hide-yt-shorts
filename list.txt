@@ -30,6 +30,9 @@ www.youtube.com##yt-chip-cloud-chip-renderer:has(.ytChipShapeInactive:has-text(/
 ! Hide shorts sections on search page
 www.youtube.com##ytm-shorts-lockup-view-model-v2:upward(grid-shelf-view-model)
 
+! Hide shorts in the notifications area
+www.youtube.com##ytd-notification-renderer:has(> a[href^="/shorts/"])
+
 !!! MOBILE !!!
 
 ! Hide all videos with the shorts indicator
